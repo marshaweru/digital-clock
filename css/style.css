@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+/*CSS for class name hero*/
+.hero{
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    position: relative;
+}
+/*CSS for class name container*/
+.container{
+    height: 180px;
+    width: 800px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    /*background: wheat;*/
+}
+/*CSS for class name clock*/
+.clock{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: bisque;
+    border-radius: 10px;
+    justify-content: center;
+    /*to make the rectangle blurred*/
+    backdrop-filter: blur(40px);
+}
+
+/*CSS for adding square and circle in container using pseudo elements befor and after*/
+/*for before, element will be a square at the top left side of container*/
+.container::before{
+    content: '';
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    background: #f41b75;
+    border-radius: 5px;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+/*for after, element will be  a circle*/
+.container::after{
+    content: '';
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background: #419aff;
+    border-radius: 50%;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+/*CSS for clock span*/
+.clock span{
+    display: inline-block;
+    font-size: 80px;
+    text-align: center;
+    position: relative;   
+    width: 110px;
+}
+/*Add names ie hours, minutes and seconds.N/B :: is called pseudo element*/
+.clock span::after{
+    position: absolute;
+    /*remove content after adding ids to the spans*/
+    /*content: 'HOURS';*/
+    left: 50px;
+    transform: translate(-50%);
+    font-size: 16px;
+    bottom: -5px;
+}
+/*CSS for ids*/
+#hrs::after{
+    content: 'HOURS'
+}
+#min::after{
+    content: 'MINS';
+}
+#sec::after{
+    content: 'SEC';
+}
