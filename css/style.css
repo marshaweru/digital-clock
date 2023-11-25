@@ -29,7 +29,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background: bisque;
+    background: rgb(170, 149, 124);
     border-radius: 10px;
     justify-content: center;
     /*to make the rectangle blurred*/
