@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     background: rgb(226, 196, 160);
-    border-radius: 10px;
+    border-radius: 12px;
     justify-content: center;
     /*to make the rectangle blurred*/
     backdrop-filter: blur(40px);
