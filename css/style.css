@@ -36,7 +36,7 @@
     backdrop-filter: blur(40px);
 }
 
-/*CSS for adding square and circle in container using pseudo elements befor and after*/
+/*CSS for adding square and circle in container using pseudo elements before and after*/
 /*for before, element will be a square at the top left side of container*/
 .container::before{
     content: '';
